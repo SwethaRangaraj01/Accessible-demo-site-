@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Demo Site</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Skip Link Styling */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 10px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content with Grid */
+        .main-grid {
+            display: grid;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        /* Intro Section */
+        .intro {
+            text-align: center;
+        }
+
+        /* Services Section */
+        .services {
+            margin-top: 20px;
+        }
+
+        .service-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 200px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Skip to main content link -->
+    <a href="#maincontent" class="skip-link">Skip to Main Content</a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="maincontent" class="main-grid">
+        <section class="intro">
+            <h1>Welcome to Our Accessible Site</h1>
+            <p>This website is designed using modern web practices.</p>
+        </section>
+
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">Web Development</div>
+                <div class="card">Graphic Design</div>
+                <div class="card">SEO Optimization</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Accessible Demo Site</p>
+    </footer>
+
+</body>
+</html>
